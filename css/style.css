@@ -1,10 +1,10 @@
-/********** Template CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 :root {
-    /* PALETA KALÉNDULAS */
-    --primary: #6CC4B9;   /* verde agua (botones, enlaces, iconos) */
-    --light: #FFF5F3;     /* fondo clarito pastel */
-    --dark: #314246;      /* texto oscuro elegante */
-    --accent: #F4C9B6;    /* rosita/beige para detalles */
+    --primary: #6CC4B9;   
+    --light: #FFF5F3;     
+    --dark: #314246;      
+    --accent: #F4C9B6;    
 }
 
 .back-to-top {
@@ -37,7 +37,6 @@
     transition: .5s;
 }
 
-/* aquí forzamos ya el color del botón principal */
 .btn.btn-primary {
     color: #FFFFFF;
     background-color: var(--primary);
@@ -91,8 +90,9 @@ h4,
 .display-4,
 .display-5,
 .display-6 {
-    font-family: 'Lobster Two', cursive;
-    font-weight: 700;
+    font-family: "Lobster Two", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h5,
@@ -173,7 +173,6 @@ h6,
 
 /*** Header ***/
 /* las ondas de arriba y abajo */
-/* === Ondas/burbujas arriba y abajo con el MISMO tamaño === */
 :root { --wave-h: 16px; }   /* ajusta 18–26px a tu gusto */
 
 .header-carousel::before,
@@ -185,10 +184,10 @@ h6,
   left: 0;
   width: 100%;
   height: var(--wave-h);
-  z-index: 3;                    /* por encima de la imagen, por debajo de flechas si quieres */
+  z-index: 3;                   
   background-position: center;
   background-repeat: repeat-x;
-  background-size: auto var(--wave-h); /* escala la imagen a la altura */
+  background-size: auto var(--wave-h); 
 }
 
 /* Onda superior */
@@ -231,22 +230,21 @@ h6,
 }
 */
 
-/* ↓↓↓ AQUI REDUZCO EL ALTO DEL HERO Y MUESTRO UN POCO MÁS ARRIBA ↓↓↓ */
 .header-carousel .owl-carousel-item {
     position: relative;
-    min-height: 450px;            /* antes estaba más alto */
+    min-height: 450px;     
 }
 .header-carousel .owl-carousel-item img {
     position: absolute;
     width: 100%;
     height: 100px;
     object-fit: cover;
-    object-position: 50% 50%;     /* 80% = se ve un pelín más de arriba */
+    object-position: 50% 50%;    
 }
 
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
-        min-height: 300px;        /* en móvil un pelín más alto para que no se corte el texto */
+        min-height: 300px;        
     }
     
     .header-carousel .owl-carousel-item p {
@@ -392,20 +390,16 @@ h6,
     transition: .5s;
 }
 
-/* efecto hover que ya tenías */
 .about-img img:hover {
     background: var(--primary) !important;
 }
 
-/* 🔹 ARREGLO para que las fotos redondas no se vean ovaladas */
 .about-img img {
-    aspect-ratio: 1 / 1;     /* fuerza proporción cuadrada */
-    object-fit: cover;       /* recorta sin deformar */
+    aspect-ratio: 1 / 1;     
+    object-fit: cover;      
     width: 100%;
     height: auto;
 }
-
-
 
 /*** Classes ***/
 .classes-item {
@@ -415,7 +409,6 @@ h6,
 .classes-item:hover {
     margin-top: -10px;
 }
-
 
 /*** Team ***/
 .team-item .team-text {
@@ -452,7 +445,6 @@ h6,
     }
 }
 
-/* aquí adapto el color del borde al verde kaléndulas (antes era un verde raro) */
 .testimonial-carousel .testimonial-item .border {
     border: 1px dashed rgba(108, 196, 185, .4) !important;
 }
@@ -495,7 +487,7 @@ h6,
 
  /* fondo y color del footer */
 .footer {
-  background-color: var(--dark);      /* tu color oscuro */
+  background-color: var(--dark);      
   color: rgba(255,255,255,0.7);
   padding-top: 3rem;
   padding-bottom: 1.5rem;
@@ -545,23 +537,20 @@ h6,
     box-shadow: none;
 }
 
-/* ——— AQUÍ VIENE LO IMPORTANTE ——— */
-
-/* 1) el contenido del footer va centrado y con el mismo ancho que la página */
 .footer .footer-inner,
 .footer .footer-copy {
-  max-width: 1280px;   /* pon aquí el ANCHO de tu página */
-  margin: 0 auto;      /* centra */
-  padding: 0 2rem;     /* margen lateral como en el header */
+  max-width: 1280px;   
+  margin: 0 auto;      
+  padding: 0 2rem;    
 }
-/* 2) línea separadora de la parte de copyright */
+
 .footer .footer-copy {
   border-top: 1px solid rgba(255,255,255,0.1);
   margin-top: 2rem;
   padding-top: 1rem;
   font-size: 15px;
 }
-/* 3) menú inferior */
+
 .footer .footer-menu a {
   margin-right: 15px;
   padding-right: 15px;
@@ -587,7 +576,7 @@ h6,
   }
 }
 
-/* ====== OVERRIDES FINALES PARA MATAR NARANJAS Y AZUL OSCURO DEL TEMPLATE ====== */
+/* ====== OVERRIDES FINALES ====== */
 
 .bg-primary { background-color: var(--primary) !important; }
 .text-primary { color: var(--primary) !important; }
@@ -599,14 +588,12 @@ h6,
     color: #fff !important;
 }
 
-/* footer a nuestro color oscuro */
 .footer,
 .footer.bg-dark,
 .bg-dark {
     background-color: var(--dark) !important;
 }
 
-/* suavizar las tarjetitas de categorías para que no sean tan infantiles */
 .facility-item .facility-text {
   border-radius: 20px;
   min-height: 180px;
@@ -627,9 +614,7 @@ h6,
   box-shadow: 0 12px 30px rgba(0,0,0,0.07);
 }
 
-
-
-/* === TARJETAS KALÉNDULAS – FOTO ARRIBA, TEXTO ABAJO === */
+/* === TARJETAS  === */
 .kal-cards {
   display: flex;
   flex-wrap: wrap;
@@ -648,7 +633,7 @@ h6,
   border-radius: 20px;
   overflow: hidden;
   background: #ffffff;
-  border: 1px solid rgba(108, 196, 185, 0.12); /* borde pastel más visible */
+  border: 1px solid rgba(108, 196, 185, 0.12); 
   box-shadow: 0 15px 35px rgba(0,0,0,0.06);
   transition: transform .3s ease, box-shadow .3s ease;
   cursor: pointer;
@@ -691,8 +676,8 @@ h6,
 
 /* ICONO – efecto vidrio */
 .kal-icon {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   border-radius: 18px;
   background: rgba(255,255,255,0.9);
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
@@ -702,7 +687,7 @@ h6,
   transition: transform .35s ease;
 }
 
-/* ZONA DE TEXTO (DEBAJO DE LA FOTO) */
+/* TEXTO DEBAJO DE LA FOTO */
 .kal-info {
   position: relative;
   z-index: 4;
@@ -734,20 +719,16 @@ h6,
 /* ========================= */
 
 .kal-bebes::before {
-  background-image: url("../img/cat-bebes.jpg");
   background-color: #f3eaff;
 }
 .kal-eventos::before {
-  background-image: url("../img/cat-eventos.jpg");
   background-color: #ffe8e2;
 }
 .kal-mascotas::before {
-  background-image: url("../img/cat-mascotas.jpg");
-  background-color: #fff3e3; /* fondo anaranjado pastel */
+  background-color: #fff3e3; 
 }
 .kal-profes::before {
-  background-image: url("../img/cat-profe.jpg");
-  background-color: #e8f5f3;
+  background-color: #d9fcf7;
 }
 
 /* ========================= */
@@ -763,7 +744,7 @@ h6,
   color: #b499d8;
 }
 
-/* EVENTOS – rosita */
+/* NAVIDAD – rosita */
 .kal-eventos .kal-icon {
   background: rgba(246, 165, 163, 0.25);
   border: 1px solid rgba(246, 165, 163, 0.3);
@@ -781,7 +762,7 @@ h6,
   color: #f4b27a;
 }
 
-/* PROFES / EMPRESA – turquesa Kaléndulas */
+/* EVENTOS – turquesa */
 .kal-profes .kal-icon {
   background: rgba(108, 196, 185, 0.25);
   border: 1px solid rgba(108, 196, 185, 0.3);
@@ -799,7 +780,7 @@ h6,
   transform: translateY(-5px) rotate(-5deg);
 }
 
-/* BLUR DE LAS NO HOVER (solo escritorio) */
+/* BLUR */
 .kal-cards:hover .kal-card:not(:hover) {
   filter: blur(3px) brightness(0.9);
   transform: scale(.97);
@@ -818,18 +799,14 @@ h6,
 }
 
 
-/* ===== Ajuste general para que ocupe todo el ancho ===== */
+/* ===== LAYOUT ===== */
 
-/* ===== LAYOUT HÍBRIDO ===== */
-
-/* fondo pastel suave */
 body {
   margin: 0;
   background: #fff5f3;
   overflow-x: hidden;
 }
 
-/* header ancho completo */
 .header-carousel,
 .container-fluid {
   width: 100% !important;
@@ -837,7 +814,6 @@ body {
   padding: 0;
 }
 
-/* resto del contenido centrado */
 .container,
 .container-xxl {
   max-width: 1250px;
@@ -845,16 +821,13 @@ body {
   padding: 0 1.5rem;
 }
 
-
-/* en pantallas muy grandes */
 @media (min-width: 1500px) {
   .container {
     max-width: 1380px;
   }
 }
 
-
-/* ====== TARJETAS DE PRODUCTO KALÉNDULAS ====== */
+/* ====== TARJETAS DE PRODUCTO ====== */
 .kal-prod-card {
   background: #fff;
   border-radius: 18px;
@@ -872,8 +845,8 @@ body {
 .kal-prod-img {
   position: relative;
   width: 100%;
-  padding-top: 62%;              /* proporción 16:10 sin fijar altura */
-  background: #fef7f4;           /* tu fondo rosita */
+  padding-top: 62%;              
+  background: #fef7f4;           
   overflow: hidden;
 }
 
@@ -890,7 +863,7 @@ body {
   position: absolute;
   top: 14px;
   right: 14px;
-  background: #59b4aa;           /* turquesa Kaléndulas */
+  background: #59b4aa;           
   color: #fff;
   font-weight: 600;
   font-size: .85rem;
@@ -917,7 +890,7 @@ body {
   margin-bottom: .75rem;
 }
 
-/* botoncito */
+/* boton */
 .kal-prod-btn {
   background: #59b4aa;
   border: none;
@@ -932,5 +905,73 @@ body {
   opacity: .85;
   cursor: pointer;
 }
+
+/* ——— Bloques informativos Kaléndulas ——— */
+.kal-block {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .06);
+  border-radius: 14px;
+  padding: 20px 20px 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .04);
+  margin-bottom: 16px;
+}
+
+.kal-block h2 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.kal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kal-list li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 10px 0;
+  border-top: 1px dashed rgba(0, 0, 0, .08);
+}
+.kal-list li:first-child { border-top: 0; }
+
+.kal-ico {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(108, 196, 185, .15); 
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.kal-note {
+  margin: 8px 0 0;
+  font-size: .95rem;
+  color: #5b6a6e;
+}
+
+/* ====== QUIÉNES SOMOS ====== */
+.kal-about-figure {
+  display: grid;
+  place-items: center;
+}
+
+.kal-about-logo {
+  width: clamp(220px, 60%, 360px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .kal-about .d-flex.flex-wrap.gap-3.align-items-center {
+    gap: 12px !important;
+  }
+}
+
+
 
 
